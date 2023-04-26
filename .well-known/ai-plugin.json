@@ -9,10 +9,10 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://solana-gpt-plugin.onrender.com/.well-known/openapi.yaml",
+    "url": "https://chatgpt-gpt-plugin.vercel.app/.well-known/openapi.yaml",
     "has_user_authentication": false
   },
-  "logo_url": "https://solana-gpt-plugin.onrender.com/.well-known/logo.png",
+  "logo_url": "https://chatgpt-gpt-plugin.vercel.app/.well-known/logo.png",
   "contact_email": "elias@clockwork.xyz",
   "legal_info_url": "http://example.com/legal-info"
 }
