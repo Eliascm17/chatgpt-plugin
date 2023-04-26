@@ -22,14 +22,15 @@ export async function createRecurringTokenTransfer(req: Request) {
   // sender and recipient pubkeys
   const senderPublicKey = new PublicKey(sender);
   const destinationPublicKey = new PublicKey(destination as String);
+  const mintPublicKey = new PublicKey(mint as String);
 
   // sender and recipient token accounts
   const sourceToken = getAssociatedTokenAddressSync(
-    new PublicKey(mint as string),
+    mintPublicKey,
     senderPublicKey
   );
   const destinationToken = getAssociatedTokenAddressSync(
-    new PublicKey(mint as string),
+    mintPublicKey,
     destinationPublicKey
   );
 

@@ -16,7 +16,9 @@ export type TransactionEndpoints = (typeof TRANSACTION_ENDPOINTS)[number];
 export const TX_DESCRIPTIONS: Record<TransactionEndpoints, string> = {
   createRecurringTokenTransfer: "Sign to create recurring token transfer powered by clockwork"
 };
-export const TX_HANDLERS: Record<TransactionEndpoints, TransactionHandler> = { createRecurringTokenTransfer };
+export const TX_HANDLERS: Record<TransactionEndpoints, TransactionHandler> = { 
+  createRecurringTokenTransfer: createRecurringTokenTransfer
+};
 
 // Inferred Constants
 export let HELIUS_URL: string;

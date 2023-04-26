@@ -7,7 +7,7 @@ paths:
   /createRecurringTokenTransfer:
     post:
       summary: createRecurringTokenTransfer
-      description: Accepts Solana pubkey address for `amount`, `destination`, and `mint` to create a recurring token transfer. Returns a transaction signature
+      description: Accepts Solana pubkey address for amount, destination pubkey, and mint pubkey to create a recurring token transfer with a clockwork thread. Returns a transaction signature
       operationId: create_recurring_token_transfer_tx
       requestBody:
         content:
