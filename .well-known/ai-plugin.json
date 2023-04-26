@@ -2,7 +2,7 @@
   "schema_version": "v1",
   "name_for_model": "clockwork",
   "name_for_human": "Clockwork GPT Plugin",
-  "description_for_model": "Plugin for creating clockwork automations on top of the Solana blockchain and to find answers to questions specific to clockwork threads. Use it whenever a user asks something that might be related to creating an automation on solana",
+  "description_for_model": "Plugin for creating clockwork automations on top of the Solana blockchain and to find answers to questions specific to clockwork threads. Use it whenever a user asks something that might be related to creating an automation on solana.",
   "description_for_human": "Create Solana Automations using Clockwork.",
   "auth": {
     "type": "none"
