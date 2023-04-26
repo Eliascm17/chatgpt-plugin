@@ -7,9 +7,11 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
+    "@clockwork-xyz/sdk": "^0.3.0",
     "@coral-xyz/anchor": "^0.27.0",
     "@metaplex-foundation/mpl-bubblegum": "^0.6.2",
     "@metaplex-foundation/mpl-token-metadata": "^2.10.0",
+    "@coral-xyz/anchor": "^0.27.0",
     "@solana/pay": "^0.2.5",
     "@solana/spl-account-compression": "^0.1.7",
     "@solana/spl-token": "^0.3.7",

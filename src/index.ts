@@ -5,17 +5,9 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-import { getTransaction } from "./handlers/getTransaction";
-
 import configConstants, { APP, PORT, TX_DESCRIPTIONS } from "./constants";
 configConstants();
 
-import { getSignaturesForAddress } from "./handlers/getSignaturesForAddress";
-import { getAccountInfo } from "./handlers/getAccountInfo";
-import { getBalance } from "./handlers/getBalance";
-import { getAssetsByOwner } from "./handlers/getAssetsByOwner";
-import { getListedCollectionNFTs } from "./handlers/getListedCollectionNFTs";
-import { getCollectionsByFloorPrice } from "./handlers/getCollectionsByFloorPrice";
 import { makeRedirectToLinkPreview } from "./handlers/solana-pay/redirectToLinkPreview";
 import { makeQrcodeLinkPreview } from "./handlers/solana-pay/qrcodeLinkPreview";
 import { makeCreateQrCode } from "./handlers/solana-pay/createQrCode";
@@ -23,7 +15,6 @@ import {
   respondToSolanaPayGet,
   makeRespondToSolanaPayPost,
 } from "./handlers/solana-pay/tx-request-server";
-import { getTokenAccounts } from "./handlers/getTokenAccounts";
 
 APP.use(bodyParser.json());
 APP.use(
@@ -53,23 +44,6 @@ function errorHandle(
     });
   };
 }
-
-// Solana RPC
-APP.post("/getBalance", errorHandle(getBalance));
-APP.post("/getAccountInfo", errorHandle(getAccountInfo));
-APP.post("/getTransaction", errorHandle(getTransaction));
-APP.post("/getTokenAccounts", errorHandle(getTokenAccounts));
-APP.post("/getSignaturesForAddress", errorHandle(getSignaturesForAddress));
-
-// Metaplex ReadAPI (using Helius)
-APP.post("/getAssetsByOwner", errorHandle(getAssetsByOwner));
-
-// NFT Listings (using Hyperspace)
-APP.post("/getListedCollectionNFTs", errorHandle(getListedCollectionNFTs));
-APP.post(
-  "/getCollectionsByFloorPrice",
-  errorHandle(getCollectionsByFloorPrice)
-);
 
 // Write API
 // -> Shows SolanaPay QR code in link previews
